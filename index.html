@@ -8,96 +8,96 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <img class="logo"
+    <header class="header">
+        <img class="header__logo"
             alt="Logo Criativa Web"
             src="./logo/logo-cw.png"
             srcset="./logo/logo-cw-p.avif 600w,
                     ./logo/logo-cw-m.avif 1200w,
                     ./logo/logo-cw-g.avif 1800w"
         >
-        <div class="menu-header">
-            <div class="menu-acoes">
-                <a href="#form-contato" class="contato-header">Contato</a>
-                <button id="hamburguer" aria-label="Abrir menu">☰</button>
+        <div class="header__menu" id="header-menu">
+            <div class="header__contato">
+                <a href="#form-contato" class="header__contato-link">Contato</a>
+                <button class="header__hamburguer" id="header-hamburguer" aria-label="Abrir menu">☰</button>
             </div>
 
-            <nav id="menu">
-                <ul class="menu-lista">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre-nos">Sobre nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
+            <nav id="header-options" class="header__options">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="#home">Home</a></li>
+                    <li class="header__item"><a class="header__link" href="#sobre-nos">Sobre nós</a></li>
+                    <li class="header__item"><a class="header__link" href="#servicos">Serviços</a></li>
+                    <li class="header__item"><a class="header__link" href="#depoimentos">Depoimentos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
-        <h1>Criativa Web</h1>
-        <section class="main-section home" id="home">
-            <h2>Bem-vindo!</h2>
-            <p class="main-paragrafo">Somos uma agência de marketing digital especializada em criar soluções criativas para impulsionar o seu negócio online. Nossa equipe de especialistas está pronta para ajudar você a alcançar seus objetivos de marketing e aumentar sua presença digital.</p>
+        <h1 class="main__title">Criativa Web</h1>
+        <section class="hero" id="home">
+            <h2 class="hero__title">Bem-vindo!</h2>
+            <p class="hero__text">Somos uma agência de marketing digital especializada em criar soluções criativas para impulsionar o seu negócio online. Nossa equipe de especialistas está pronta para ajudar você a alcançar seus objetivos de marketing e aumentar sua presença digital.</p>
         </section>
-        <section class="main-section sobre-nos" id="sobre-nos">
-            <h2>Sobre Nós</h2>
-            <p class="main-paragrafo">A Criativa Web foi fundada em 2010 com a missão de fornecer serviços de marketing digital de alta qualidade para empresas de todos os tamanhos. Com uma equipe talentosa e apaixonada, estamos comprometidos em ajudar nossos clientes a alcançar o sucesso online.</p>
+        <section class="about" id="sobre-nos">
+            <h2 class="about__title">Sobre Nós</h2>
+            <p class="about__text">A Criativa Web foi fundada em 2010 com a missão de fornecer serviços de marketing digital de alta qualidade para empresas de todos os tamanhos. Com uma equipe talentosa e apaixonada, estamos comprometidos em ajudar nossos clientes a alcançar o sucesso online.</p>
         </section>
-        <section class="main-section servicos" id="servicos">
-            <h2>Nossos Serviços</h2>
-            <ul class="lista-servicos">
-                <li>Desenvolvimento de Sites</li>
-                <li>SEO (Otimização para Motores de Busca)</li>
-                <li>Marketing de Mídias Sociais</li>
-                <li>Publicidade Online</li>
-                <li>Design Gráfico</li>
+        <section class="services" id="servicos">
+            <h2 class="services__title">Nossos Serviços</h2>
+            <ul class="services__list">
+                <li class="services__item">Desenvolvimento de Sites</li>
+                <li class="services__item">SEO (Otimização para Motores de Busca)</li>
+                <li class="services__item">Marketing de Mídias Sociais</li>
+                <li class="services__item">Publicidade Online</li>
+                <li class="services__item">Design Gráfico</li>
             </ul>
         </section>
         <section class="depoimentos" id="depoimentos">
-            <h2>Depoimentos</h2>
+            <h2 class="depoimentos__title">Depoimentos</h2>
 
-            <div class="container-depo">
-                <article class="card-depo">
-                    <img class="foto-cliente" alt="Foto do cliente"
+            <div class="depoimentos__container">
+                <article class="depoimentos__card">
+                    <img class="depoimentos__foto" alt="Foto do cliente"
                         src="./foto-cliente/geralt/geralt.jpg"
                         srcset="./foto-cliente/geralt/geralt-pequeno.avif 600w,
                                 ./foto-cliente/geralt/geralt-medio.avif 1200w,
                                 ./foto-cliente/geralt/geralt-grande.avif 1800w"
                     >
-                    <h3 class="nome-cliente">Geralt de Rivia</h3>
-                    <p class="depo">"A Criativa Web foi fundamental para o crescimento do meu negócio. Eles entenderam exatamente o que eu precisava e entregaram resultados além das minhas expectativas."</p>
-                    <img class="stars" alt="Estrelas de avaliação"
+                    <h3 class="depoimentos__nome">Geralt de Rivia</h3>
+                    <p class="depoimentos__text">"A Criativa Web foi fundamental para o crescimento do meu negócio. Eles entenderam exatamente o que eu precisava e entregaram resultados além das minhas expectativas."</p>
+                    <img class="depoimentos__stars" alt="Estrelas de avaliação"
                         src="./estrelas/estrelas.png"
                         srcset="./estrelas/estrelas-pequeno.avif 600w,
                                 ./estrelas/estrelas-medio.avif 1200w,
                                 ./estrelas/estrelas-grande.avif 1800w"
                     >
                 </article>
-                <article class="card-depo">
-                    <img class="foto-cliente" alt="Foto do cliente"
+                <article class="depoimentos__card">
+                    <img class="depoimentos__foto" alt="Foto do cliente"
                         src="./foto-cliente/trevor/trevor.jpg"
                         srcset="./foto-cliente/trevor/trevor-pequeno.avif 600w,
                                 ./foto-cliente/trevor/trevor-medio.avif 1200w,
                                 ./foto-cliente/trevor/trevor-grande.avif 1800w"
                     >
-                    <h3 class="nome-cliente">Trevor Phillips</h3>
-                    <p class="depo">"Estava precisando de mais visibilidade online e a Criativa Web entregou resultados excepcionais."</p>
-                    <img class="stars" alt="Estrelas de avaliação"
+                    <h3 class="depoimentos__nome">Trevor Phillips</h3>
+                    <p class="depoimentos__text">"Estava precisando de mais visibilidade online e a Criativa Web entregou resultados excepcionais."</p>
+                    <img class="depoimentos__stars" alt="Estrelas de avaliação"
                         src="./estrelas/estrelas.png"
                         srcset="./estrelas/estrelas-pequeno.avif 600w,
                                 ./estrelas/estrelas-medio.avif 1200w,
                                 ./estrelas/estrelas-grande.avif 1800w"
                     >
                 </article>
-                <article class="card-depo">
-                    <img class="foto-cliente" alt="Foto do cliente"
+                <article class="depoimentos__card">
+                    <img class="depoimentos__foto" alt="Foto do cliente"
                         src="./foto-cliente/crash/crash.jpg"
                         srcset="./foto-cliente/crash/crash-pequeno.avif 600w,
                                 ./foto-cliente/crash/crash-medio.avif 1200w,
                                 ./foto-cliente/crash/crash-grande.avif 1800w"
                     >
-                    <h3 class="nome-cliente">Crash Bandicoot</h3>
-                    <p class="depo">"Vim através da indicação de meu amigo Geralt, umas das melhores decisões que tomei para o meu negócio."</p>
-                    <img class="stars" alt="Estrelas de avaliação"
+                    <h3 class="depoimentos__nome">Crash Bandicoot</h3>
+                    <p class="depoimentos__text">"Vim através da indicação de meu amigo Geralt, umas das melhores decisões que tomei para o meu negócio."</p>
+                    <img class="depoimentos__stars" alt="Estrelas de avaliação"
                         src="./estrelas/estrelas.png"
                         srcset="./estrelas/estrelas-pequeno.avif 600w,
                                 ./estrelas/estrelas-medio.avif 1200w,
@@ -106,49 +106,49 @@
                 </article>
             </div>       
         </section>
-        <form class="form-contato" id="form-contato" action="">
-            <fieldset>
-                <legend>Formulário de Contato</legend>
-                <h2>Contato</h2>
-                <label for="name">Nome completo:</label>
-                <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+        <form class="form" id="form-contato" action="">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Formulário de Contato</legend>
+                <h2 class="form__title">Contato</h2>
+                <label class="form__label" for="name">Nome completo:</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Seu nome completo" required>
                 <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
+                <label class="form__label" for="email">Email:</label>
+                <input class="form__input" type="email" id="email" name="email" placeholder="Seu melhor email" required>
                 <br>
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                <label class="form__label" for="message">Mensagem:</label>
+                <textarea class="form__textarea" id="message" name="message" placeholder="Sua mensagem" required></textarea>
                 <br>
-                <button type="submit">Enviar</button>
+                <button class="form__btn" type="submit">Enviar</button>
             </fieldset>
         </form>
     </main>
-    <footer>
-        <div class="menu-footer">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+    <footer class="footer">
+        <div class="footer__menu">
+            <h3 class="footer__menu-title">Menu</h3>
+            <ul class="footer__menu-list">
+                <li class="footer__item"><a class="footer__link" href="#home">Home</a></li>
+                <li class="footer__item"><a class="footer__link" href="#sobre-nos">Sobre nós</a></li>
+                <li class="footer__item"><a class="footer__link" href="#servicos">Serviços</a></li>
+                <li class="footer__item"><a class="footer__link" href="#depoimentos">Depoimentos</a></li>
+                <li class="footer__item"><a class="footer__link" href="#form-contato">Contato</a></li>
             </ul>
         </div>
 
-                <img class="logo"
-            alt="Logo Criativa Web"
-            src="./logo/logo-cw.png"
-            srcset="./logo/logo-cw-p.avif 600w,
-                    ./logo/logo-cw-m.avif 1200w,
-                    ./logo/logo-cw-g.avif 1800w"
-        >
+            <img class="footer__logo"
+                alt="Logo Criativa Web"
+                src="./logo/logo-cw.png"
+                srcset="./logo/logo-cw-p.avif 600w,
+                        ./logo/logo-cw-m.avif 1200w,
+                        ./logo/logo-cw-g.avif 1800w"
+             >
 
-        <div class="contato-footer">
-            <h3>Contato</h3>
-            <p>Email: contato@criativaweb.com</p>
-            <p>Telefone: (51) 99999-9999</p>
+        <div class="footer__contato">
+            <h3 class="footer__contato-title">Contato</h3>
+            <p class="footer__contato-text">Email: contato@criativaweb.com</p>
+            <p class="footer__contato-text">Telefone: (51) 99999-9999</p>
         </div>
-        <p class="copyright">&copy; 2026 Criativa Web. Todos os direitos reservados.</p>
+        <p class="footer__copyright">&copy; 2026 Criativa Web. Todos os direitos reservados.</p>
         
     </footer>
 </body>
