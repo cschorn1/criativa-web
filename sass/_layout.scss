@@ -1,0 +1,222 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+.header {
+    @include flex(space-between);
+
+    width: 100vw;
+    min-height: $header-height-min;
+    height: $header-height;
+
+    background:
+        url('../header/exploding-yellow-rays-png.avif') left center / 220px auto no-repeat,
+        $gradiente-principal center / 300% 300% no-repeat;
+
+    animation: gradientAnimation $animacao-gradiente;
+
+    color: $cor-branca;
+
+    &__logo {
+        width: $logo-width;
+        height: auto;
+        margin-left: $spacing-lg;
+    }
+
+    &__options {
+        @include flex(flex-start);
+
+        flex: 1;
+        padding: 0 $spacing-md;
+        order: 1;
+
+        &.ativo {
+            display: block;
+        }
+    }
+
+    &__menu {
+        @include flex;
+
+        gap: $spacing-sm + 6px;
+        margin-right: $spacing-md;
+    }
+
+    &__list {
+        @include flex(space-between);
+        gap: $spacing-md;
+        list-style: none;
+    }
+
+    &__link {
+        color: $cor-branca;
+
+        &:hover {
+            color: $cor-dourada;
+            text-decoration: underline;
+        }
+    }
+
+    &__contato {
+        @include flex;
+
+        gap: $spacing-sm;
+        margin-left: $spacing-md;
+        margin-right: $spacing-sm;
+        order: 2;
+    }
+
+    &__contato-link {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 8px $spacing-md;
+
+        @include botao($cor-contato, $cor-branca);
+
+        &:hover {
+            background: $cor-contato-hover;
+        }
+    }
+
+    &__hamburguer {
+        display: none;
+
+        padding: 8px $spacing-sm;
+
+        background: $cor-hamburguer;
+        border: 1px solid $cor-hamburguer-borda;
+
+        color: $cor-branca;
+        font-size: 1.6rem;
+        cursor: pointer;
+        border-radius: 8px;
+        backdrop-filter: blur(2px);
+
+        &:hover {
+            background: $cor-hamburguer-borda;
+            color: $cor-preta;
+        }
+    }
+}
+
+.main {
+    padding: $spacing-md;
+    min-height: 80vh;
+    background: $cor-main;
+
+    &__title {
+        padding: $spacing-sm + 5px;
+        margin-bottom: $spacing-sm;
+
+        background: linear-gradient(
+            90deg,
+            $cor-header-inicio,
+            $cor-header-meio,
+            $cor-header-fim
+        );
+
+        text-align: center;
+        text-transform: uppercase;
+        color: $cor-titulo;
+        font-size: 2rem;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: $spacing-md;
+
+    padding: $spacing-lg $spacing-md;
+
+    color: $cor-branca;
+
+    background:
+        url('../header/exploding-yellow-rays-png.avif') left center / 220px auto no-repeat,
+        $gradiente-principal center / 300% 300% no-repeat;
+
+    animation: gradientAnimation $animacao-gradiente;
+
+    &__menu-title,
+    &__contato-title,
+    &__contato-text,
+    &__link {
+        color: $cor-branca;
+    }
+
+    &__link {
+
+        &:hover {
+            color: $cor-dourada;
+            text-decoration: underline;
+        }
+    }
+
+    &__menu {
+
+        padding-left: $spacing-lg * 2;
+
+        justify-self: start;
+
+        text-align: left;
+
+        min-width: 180px;
+    }
+
+    &__contato {
+
+        padding-right: $spacing-lg * 2;
+
+        justify-self: end;
+
+        text-align: right;
+
+        min-width: 180px;
+    }
+
+    &__menu-list,
+    &__contato-text {
+        margin-top: 8px;
+    }
+
+    &__menu-list {
+        list-style: none;
+    }
+
+    &__item + &__item {
+        margin-top: 6px;
+    }
+
+    &__copyright {
+        grid-column: 1 / -1;
+
+        margin-top: $spacing-sm;
+
+        text-align: center;
+    }
+
+    &__logo {
+
+        justify-self: center;
+        align-self: center;
+
+        margin: 0;
+
+        width: min(30vh, 150px);
+
+        max-height: 30vh;
+
+        height: auto;
+
+        transform: translateY($spacing-lg);
+    }
+
+    &__menu-title,
+    &__contato-title {
+
+        font-weight: 700;
+
+        color: $cor-preta;
+    }
+}

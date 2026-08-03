@@ -1,0 +1,256 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+.hero,
+.about,
+.services {
+    @include card;
+}
+
+.hero,
+.about {
+
+    &__title {
+        margin-bottom: $spacing-sm;
+        color: $cor-titulo-secao;
+    }
+
+    &__text {
+        margin-bottom: $spacing-sm;
+        color: $cor-texto-claro;
+    }
+}
+
+.services {
+
+    &__title {
+        margin-bottom: $spacing-sm;
+        color: $cor-titulo-secao;
+    }
+
+    &__list {
+        list-style: disc;
+        padding-left: $spacing-md;
+        color: $cor-texto-claro;
+    }
+
+    &__item {
+
+        &:hover {
+            color: $cor-item-hover;
+            transform: scale(1.08);
+        }
+    }
+}
+
+.depoimentos {
+
+    @include flex($align: flex-start, $direction: column);
+
+    gap: $spacing-md;
+
+    padding: $spacing-md;
+
+    background-color: $cor-depoimentos;
+    border-radius: 20px;
+
+    box-shadow: $sombra-laranja;
+
+    &__container {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        gap: $spacing-md;
+        padding: 18px;
+
+        border-radius: 20px;
+
+        box-shadow: $sombra-laranja;
+    }
+
+    &__card {
+
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+
+        grid-template-areas:
+            "foto nome"
+            "depo depo"
+            "stars stars";
+
+        gap: $spacing-sm 14px;
+
+        align-items: start;
+
+        padding: 14px 16px;
+
+        border-radius: 16px;
+
+        background: $cor-card-branco;
+
+        box-shadow: $sombra-card;
+
+        transition:
+            transform $transition-card,
+            box-shadow $transition-card;
+
+        &:hover {
+
+            transform: translateY(-5px);
+            box-shadow: $sombra-card-hover;
+        }
+    }
+
+    &__foto {
+
+        grid-area: foto;
+
+        width: clamp(80px, 15vw, 120px);
+        height: clamp(80px, 15vw, 120px);
+
+        min-width: 96px;
+        min-height: 96px;
+
+        aspect-ratio: 1;
+        object-fit: cover;
+
+        border-radius: 50%;
+        border: 2px solid $cor-borda-foto;
+    }
+
+    &__nome {
+
+        grid-area: nome;
+
+        align-self: center;
+
+        font-size: 25px;
+
+        color: $cor-nome;
+    }
+
+    &__text {
+
+        grid-area: depo;
+
+        margin-top: 4px;
+
+        font-size: 18px;
+
+        color: $cor-texto-escuro;
+    }
+
+    &__stars {
+
+        grid-area: stars;
+
+        justify-self: end;
+
+        width: 35vw;
+
+        max-width: 200px;
+        min-width: 100px;
+
+        margin-top: 8px;
+    }
+}
+
+.form {
+
+    max-width:900px;
+
+    margin:$spacing-md auto;
+
+    padding: $spacing-lg + 2px;
+
+    border-radius:20px;
+
+    background:$form-background;
+
+    border:1px solid $form-border;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.16);
+
+    &__fieldset{
+        padding:$spacing-sm;
+    }
+
+    &__title{
+
+        margin-bottom:$spacing-md;
+
+        font-size:28px;
+
+        font-weight:700;
+
+        color:$cor-header-meio;
+    }
+
+    &__label{
+
+        display:block;
+
+        margin-bottom:8px;
+
+        font-weight:600;
+
+        color:$form-label;
+    }
+
+    &__input,
+    &__textarea{
+
+        width:100%;
+
+        padding:12px 14px;
+
+        margin-bottom:16px;
+
+        border:1px solid $form-input-border;
+
+        border-radius:10px;
+
+        font-size:15px;
+
+        outline:none;
+
+        transition:
+            border-color .2s ease,
+            box-shadow .2s ease;
+
+        &:focus{
+
+            border-color:$cor-header-inicio;
+
+            box-shadow:$form-focus;
+        }
+    }
+
+    &__textarea{
+
+        min-height:120px;
+
+        resize:vertical;
+    }
+
+    &__btn{
+
+        padding:12px 22px;
+
+        @include botao($form-button-gradient, $cor-branca);
+
+        box-shadow:
+            0 8px 18px rgba(255,0,0,.25);
+
+        &:hover{
+
+            transform:translateY(-2px);
+
+            box-shadow:
+                0 10px 22px rgba(255,0,0,.35);
+        }
+    }
+
+}

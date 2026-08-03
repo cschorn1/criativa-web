@@ -1,6 +1,8 @@
-const hamburguer = document.getElementById("header-hamburguer");
-const menu = document.getElementById("header-menu");
+const hamburguer = document.querySelector(".header__hamburguer");
+const menu = document.querySelector(".header__options");
 
-hamburguer.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-});
+if (hamburguer && menu) {
+    hamburguer.addEventListener("click", () => {
+        menu.classList.toggle("ativo");
+    });
+}

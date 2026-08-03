@@ -1,0 +1,105 @@
+$fonte-principal: Arial, sans-serif;
+
+$cor-fundo: #f4f4f4;
+$cor-texto: #222;
+
+$cor-branca: #ffffff;
+$cor-preta: #000000;
+$cor-dourada: #ffd700;
+
+$cor-header-inicio: #ff0000;
+$cor-header-meio: #8b0000;
+$cor-header-fim: #ff000a;
+
+$cor-contato: rgba(250, 5, 5, 0.8);
+$cor-contato-hover: rgba(250, 5, 5, 0.96);
+
+$gradiente-principal:
+    linear-gradient(
+        100deg,
+        $cor-header-inicio,
+        $cor-header-meio,
+        $cor-header-fim
+    );
+
+$cor-hamburguer: rgba(255, 215, 0, 0.35);
+$cor-hamburguer-borda: rgba(255, 215, 0, 0.95);
+
+$logo-width: 150px;
+$header-height-min: 100px;
+$header-height: 15vh;
+
+$cor-main: rgba(255, 23, 31, 0.76);
+$cor-titulo: rgba(255, 255, 255, 0.95);
+
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 30px;
+
+$cor-card: rgba(255, 230, 0, 0.404);
+$cor-card-hover: rgba(255, 230, 0, 0.604);
+
+$cor-titulo-secao: #662900;
+$cor-texto-claro: #ffffff;
+$cor-item-hover: #ff6600;
+
+$sombra-secao: 4px 4px 10px 2px #ff0000;
+$sombra-secao-hover: 6px 6px 12px 3px #ff0000;
+
+$raio-borda: 8px;
+
+$cor-depoimentos: rgba(255, 81, 0, 0.884);
+
+$cor-card-branco: #ffffff;
+$cor-nome: #8b0000;
+$cor-texto-escuro: #333333;
+$cor-borda-foto: #ff0000;
+
+$sombra-laranja:
+    0 0 20px rgba(255, 140, 0, 0.9),
+    0 0 35px rgba(255, 94, 0, 0.75),
+    0 0 50px rgba(255, 68, 0, 0.5);
+
+$sombra-card:
+    0 8px 20px rgba(99, 0, 0, 0.12);
+
+$sombra-card-hover:
+    0 12px 24px rgba(138, 3, 3, 0.678);
+
+    $form-background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.95),
+        rgba(255,242,242,.95)
+    );
+
+$form-border: rgba(255,0,0,.15);
+
+$form-input-border:#ffb3b3;
+
+$form-label:#5a1a1a;
+
+$form-focus:
+    0 0 0 3px rgba(255,0,0,.15);
+
+$form-button-gradient:
+    linear-gradient(
+        90deg,
+        #ff2d2d,
+        #8b0000
+    );
+
+$breakpoint-mobile: 600px;
+$breakpoint-mobile-next: 601px;
+
+$breakpoint-tablet: 900px;
+$breakpoint-tablet-next: 901px;
+
+$breakpoint-menu: 1000px;
+
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-next: 1201px;
+
+$animacao-gradiente: 10s ease infinite;
+$transition-card: .3s ease;

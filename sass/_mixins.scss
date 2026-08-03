@@ -1,0 +1,38 @@
+@use 'variaveis' as *;
+
+@mixin flex(
+    $justify: flex-start,
+    $align: center,
+    $direction: row
+) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin botao($background, $color) {
+    background: $background;
+    color: $color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@mixin card {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: $raio-borda;
+
+    background-color: $cor-card;
+    box-shadow: $sombra-secao;
+
+    transition: transform .5s ease;
+
+    &:hover {
+        background-color: $cor-card-hover;
+        box-shadow: $sombra-secao-hover;
+        transform: translateY(-5px);
+    }
+}
